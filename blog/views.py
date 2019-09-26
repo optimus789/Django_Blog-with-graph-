@@ -35,27 +35,6 @@ class PostDetailView(HitCountDetailView):
     model = Post
     count_hit = True
 
-    #self.visit = statute.visits
-    # return super().get(request, *args, **kwargs)
-
-    #pk1 = Post.pk
-    #Post.objects.filter(pk=2).update(visit=F('visit') + 1)
-
-    # def get(self, request, *args, **kwargs):
-    ##post = get_object_or_404(Post, pk=kwargs['pk'])
-
-    # def test_func(self):
-    #post = self.get_object()
-    #pk1 = get_object_or_404(Post, model=self.kwargs.get('pk'))
-    #Post.objects.filter(pk=post.id).update(visit=F('visit') + 1)
-    # return True
-
-    # def get_queryset(self):
-    #   pk1 = get_object_or_404(Post, model=self.kwargs.get('pk'))
-    #   Post.objects.filter(pk=pk1).update(visit=F('visit') + 1)
-    #   pk1 = get_object_or_404(Post, pk=self.kwargs.get('pk'))
-    #  Post.objects.filter(pk=pk1).update(visit=F('visit') + 1)
-
 
 class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post

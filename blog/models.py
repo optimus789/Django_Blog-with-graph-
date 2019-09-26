@@ -20,7 +20,7 @@ class Post(models.Model, HitCountMixin):
     date_posted = models.DateTimeField(default=timezone.now)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     visit = GenericRelation(HitCount, object_id_field='object_pk',
-                            related_query_name='hit_count_generic_relation')
+                            related_query_name='hit_count_generic_relation', default=0)
 
     def __str__(self):
         return self.title
